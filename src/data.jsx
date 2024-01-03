@@ -31,6 +31,7 @@ import Work16 from "./assets/project-16.png";
 import Work17 from "./assets/project-17.png";
 import Work18 from "./assets/project-18.png";
 import Work19 from "./assets/project-19.png";
+import Work20 from "./assets/project-20.png";
 
 import Theme4 from "./assets/blue.png";
 import Theme3 from "./assets/blueviolet.png";
@@ -77,7 +78,7 @@ export const personalInfo = [
   {
     id: 1,
     title: "Name : ",
-    description: "Swati Nigam",
+    description: "Om Nigam",
   },
 
   {
@@ -216,6 +217,19 @@ export const resume = [
     year: "2017",
     title: "High School <span> Dr. Virendra Swarup Education Centre</span>",
     desc: "CGPA - 10/10",
+  },
+  {
+    id: 21,
+    category: "projects",
+    icon: <HiCode />,
+    year: " MERN, Typescript",
+    title: `<a href="https://github.com/Omi1804/Course_Selling_App" target='blank' style="color: inherit; text-decoration: none;">COURSE LELO  <span> Dynamic Full Stack Course Selling Platform</span></a>`,
+    desc: `• Developed "Course Lelo," a cutting-edge full stack web application for course selling and management.<br><br> 
+    • Utilized React for a responsive frontend; Node.js backend ensures robust performance and scalability.<br><br> 
+    • Employed TypeScript for type safety, ensuring a reliable and maintainable web application environment.<br><br>
+    • Incorporated Zod for rigorous validation and JWT for secure user authentication processes.<br><br>
+    • Leveraged Recoil for advanced state management, offering a seamless and intuitive user experience.
+    `,
   },
 
   {
@@ -456,6 +470,18 @@ export const skills = [
 ];
 
 export const portfolio = [
+  {
+    id: 20,
+    img: Work20,
+    title: "COURSE LELO",
+    details: [
+      {
+        icon: <FiExternalLink />,
+        title: "Website : ",
+        desc: `<a href="https://github.com/Omi1804/Course_Selling_App" target='blank'>https://github.com/Omi1804/Course_Selling_App</a>`,
+      },
+    ],
+  },
   {
     id: 2,
     img: Work16,
