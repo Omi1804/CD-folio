@@ -1,0 +1,32 @@
+name: Build and Deploy to Netlify
+
+on:
+  push:
+    branches:
+      - main # Set your default branch here
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: "14" # Set the Node version
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy to Netlify
+        uses: netlify/actions/cli@master
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: e77527a6-9e5d-4249-9e06-680c8088fbdd # Replace with your Netlify Site ID
+        with:
+          args: deploy --dir=dist --prod
