@@ -160,7 +160,7 @@ export const resume = [
     category: "experience",
     icon: <FaBriefcase />,
     year: "2023 / SEP",
-    title: "Amazon Web Services - Associate Solution Architect",
+    title: "Amazon Web Services - <span> Associate Solution Architect </span> ",
     desc: "Excelled in mastering AWS services at the Solution Architect level, bringing transformative solutions to life. Successfully integrated cutting-edge AWS services into our projects, amplifying their efficiency and scalability.",
   },
 
