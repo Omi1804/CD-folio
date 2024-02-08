@@ -448,7 +448,7 @@ export const skills = [
 
   {
     id: 9,
-    title: "JWT",
+    title: "PostgreSQL",
     percentage: "85",
   },
 
