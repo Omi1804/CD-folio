@@ -32,6 +32,8 @@ import Work17 from "./assets/project-17.png";
 import Work18 from "./assets/project-18.png";
 import Work19 from "./assets/project-19.png";
 import Work20 from "./assets/project-20.png";
+import Work21 from "./assets/project-21.png";
+import Work22 from "./assets/project-22.png";
 
 import Theme4 from "./assets/blue.png";
 import Theme3 from "./assets/blueviolet.png";
@@ -229,6 +231,18 @@ export const resume = [
     • Employed TypeScript for type safety, ensuring a reliable and maintainable web application environment.<br><br>
     • Incorporated Zod for rigorous validation and JWT for secure user authentication processes.<br><br>
     • Leveraged Recoil for advanced state management, offering a seamless and intuitive user experience.
+    `,
+  },
+  {
+    id: 22,
+    category: "projects",
+    icon: <HiCode />,
+    year: " MERN",
+    title: `<a href="https://github.com/Omi1804/FbHelpdesk" target='blank' style="color: inherit; text-decoration: none;">FB HELPDESK <span> Next-Gen Social Media Customer Interaction Platform</span></a>`,
+    desc: `• Developed "Course Lelo," a cutting-edge full stack web application for course selling and management.<br><br> 
+    • Engineered FB Helpdesk, leveraging React, Redux, Node.js, and MongoDB to enable businesses to efficiently manage Facebook messages, cutting response times by 60%.<br><br> 
+    • Implemented real-time communication and secure authentication with webhooks and JWT, plus Facebook login, Facilitated team collaboration, boosting productivity by 40% and enhancing customer satisfaction.<br><br>
+    • Leveraged Redux for advanced state management, offering a seamless and intuitive user experience.
     `,
   },
 
@@ -442,7 +456,7 @@ export const skills = [
 
   {
     id: 1,
-    title: "MySql",
+    title: "Redis",
     percentage: "90",
   },
 
@@ -471,6 +485,18 @@ export const skills = [
 
 export const portfolio = [
   {
+    id: 21,
+    img: Work21,
+    title: "SNACK MEDIA",
+    details: [
+      {
+        icon: <FiExternalLink />,
+        title: "Website : ",
+        desc: `<a href="https://socialsphere-fun.netlify.app/" target='blank'>https://socialsphere-fun.netlify.app/</a>`,
+      },
+    ],
+  },
+  {
     id: 20,
     img: Work20,
     title: "COURSE LELO",
@@ -479,6 +505,18 @@ export const portfolio = [
         icon: <FiExternalLink />,
         title: "Website : ",
         desc: `<a href="https://github.com/Omi1804/Course_Selling_App" target='blank'>https://github.com/Omi1804/Course_Selling_App</a>`,
+      },
+    ],
+  },
+  {
+    id: 22,
+    img: Work22,
+    title: "FB HELPDESK",
+    details: [
+      {
+        icon: <FiExternalLink />,
+        title: "Website : ",
+        desc: `<a href="https://github.com/Omi1804/FbHelpdesk" target='blank'>https://github.com/Omi1804/FbHelpdesk</a>`,
       },
     ],
   },
