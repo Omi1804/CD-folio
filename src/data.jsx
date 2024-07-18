@@ -34,6 +34,8 @@ import Work19 from "./assets/project-19.png";
 import Work20 from "./assets/project-20.png";
 import Work21 from "./assets/project-21.png";
 import Work22 from "./assets/project-22.png";
+import Work23 from "./assets/project-23.png";
+import Work24 from "./assets/project-24.png";
 
 import Theme4 from "./assets/blue.png";
 import Theme3 from "./assets/blueviolet.png";
@@ -224,13 +226,24 @@ export const resume = [
     id: 21,
     category: "projects",
     icon: <HiCode />,
-    year: " MERN, Typescript",
-    title: `<a href="https://github.com/Omi1804/Course_Selling_App" target='blank' style="color: inherit; text-decoration: none;">COURSE LELO  <span> Dynamic Full Stack Course Selling Platform</span></a>`,
-    desc: `• Developed "Course Lelo," a cutting-edge full stack web application for course selling and management.<br><br> 
-    • Utilized React for a responsive frontend; Node.js backend ensures robust performance and scalability.<br><br> 
-    • Employed TypeScript for type safety, ensuring a reliable and maintainable web application environment.<br><br>
+    year: " NextJS, Typescript",
+    title: `<a href="https://github.com/Omi1804/NEXTSkillSphere" target='blank' style="color: inherit; text-decoration: none;">Skill Sphere  <span> Dynamic Full Stack Course Selling Platform</span></a>`,
+    desc: `• Developed ’Skill Sphere,’ a cutting-edge Full Stack web app for course distribution. <br><br>
+    • Utilized NextJS, Tailwind, and PrismaORM for seamless efficient data handling.Implemented TypeScript for scalability and Type safety.<br><br>
     • Incorporated Zod for rigorous validation and JWT for secure user authentication processes.<br><br>
     • Leveraged Recoil for advanced state management, offering a seamless and intuitive user experience.
+    `,
+  },
+  {
+    id: 24,
+    category: "projects",
+    icon: <HiCode />,
+    year: " ReactNative Expo, Typescript",
+    title: `<a href="https://github.com/Omi1804/Wallie-Expo" target='blank' style="color: inherit; text-decoration: none;">Wallie Expo  <span>  React Native Cross-Platform Stock Image Application</span></a>`,
+    desc: `• 
+• Engineered a Stock Image Application with React Native Expo that allows users to Search, Download, and Share images.<br><br>
+    • Utilized React Native Expo to ensure support across Web, Android, and iOS platforms.<br><br>
+    • Using Redux for advance state management, offering a seamless and intuitive user experience.
     `,
   },
   {
@@ -241,6 +254,19 @@ export const resume = [
     title: `<a href="https://github.com/Omi1804/FbHelpdesk" target='blank' style="color: inherit; text-decoration: none;">FB HELPDESK <span> Next-Gen Social Media Customer Interaction Platform</span></a>`,
     desc: `• Developed "Course Lelo," a cutting-edge full stack web application for course selling and management.<br><br> 
     • Engineered FB Helpdesk, leveraging React, Redux, Node.js, and MongoDB to enable businesses to efficiently manage Facebook messages, cutting response times by 60%.<br><br> 
+    • Implemented real-time communication and secure authentication with webhooks and JWT, plus Facebook login, Facilitated team collaboration, boosting productivity by 40% and enhancing customer satisfaction.<br><br>
+    • Leveraged Redux for advanced state management, offering a seamless and intuitive user experience.
+    `,
+  },
+  {
+    id: 23,
+    category: "projects",
+    icon: <HiCode />,
+    year: " MERN",
+    title: `<a href="https://github.com/Omi1804/influencerMedia" target='blank' style="color: inherit; text-decoration: none;">Snack Media <span> A Full-Stack Multi Page Social Media Website
+</span></a>`,
+    desc: `• Initiated and led the development of Snack Media, a multi-page social media website.<br><br> 
+    • showcasing expertise in React.js, Node.js, and MongoDB for comprehensive front-end and back-end integration under Adz Plug.<br><br> 
     • Implemented real-time communication and secure authentication with webhooks and JWT, plus Facebook login, Facilitated team collaboration, boosting productivity by 40% and enhancing customer satisfaction.<br><br>
     • Leveraged Redux for advanced state management, offering a seamless and intuitive user experience.
     `,
@@ -434,6 +460,12 @@ export const skills = [
     percentage: "85",
   },
   {
+    id: 1,
+    title: "React Native",
+    percentage: "80",
+  },
+
+  {
     id: 7,
     title: "Typescript",
     percentage: "90",
@@ -452,12 +484,6 @@ export const skills = [
     id: 8,
     title: "MongoDB",
     percentage: "85",
-  },
-
-  {
-    id: 1,
-    title: "Redis",
-    percentage: "90",
   },
 
   {
@@ -485,6 +511,18 @@ export const skills = [
 
 export const portfolio = [
   {
+    id: 23,
+    img: Work23,
+    title: "Skill Sphere",
+    details: [
+      {
+        icon: <FiExternalLink />,
+        title: "Website : ",
+        desc: `<a href="https://next-skill-sphere.vercel.app/" target='blank'>https://next-skill-sphere.vercel.app/</a>`,
+      },
+    ],
+  },
+  {
     id: 21,
     img: Work21,
     title: "SNACK MEDIA",
@@ -493,6 +531,18 @@ export const portfolio = [
         icon: <FiExternalLink />,
         title: "Website : ",
         desc: `<a href="https://socialsphere-fun.netlify.app/" target='blank'>https://socialsphere-fun.netlify.app/</a>`,
+      },
+    ],
+  },
+  {
+    id: 24,
+    img: Work24,
+    title: "Wallie Expo",
+    details: [
+      {
+        icon: <FiExternalLink />,
+        title: "Website : ",
+        desc: `<a href="https://drive.google.com/file/d/1dX2rKG6pF3p95n2-28JJYMae_yh8zxFk/view?usp=drive_link" target='blank'>Google Drive Link</a>`,
       },
     ],
   },
@@ -769,60 +819,51 @@ export const themes = [
   {
     id: 1,
     img: Theme1,
-    color: "hsl(252, 35%, 51%)",
+    color: "#6760A4",
   },
-
   {
     id: 2,
     img: Theme2,
-    color: "hsl(4, 93%, 54%)",
+    color: "#FA3737",
   },
-
   {
     id: 3,
     img: Theme3,
-    color: "hsl(271, 76%, 53%)",
+    color: "#B55DFF",
   },
-
   {
     id: 4,
     img: Theme4,
-    color: "hsl(225, 73%, 57%)",
+    color: "#4C7DFF",
   },
-
   {
     id: 5,
     img: Theme5,
-    color: "hsl(43, 74%, 49%)",
+    color: "#DCA620",
   },
-
   {
     id: 6,
     img: Theme6,
-    color: "hsl(339, 81%, 66%)",
+    color: "#FF6FAB",
   },
-
   {
     id: 7,
     img: Theme7,
-    color: "hsl(80, 61%, 50%)",
+    color: "#80C76A",
   },
-
   {
     id: 8,
     img: Theme8,
-    color: "hsl(19, 96%, 52%)",
+    color: "#FF6532",
   },
-
   {
     id: 9,
     img: Theme9,
-    color: "hsl(88, 65%, 43%)",
+    color: "#69A933",
   },
-
   {
     id: 10,
     img: Theme10,
-    color: "hsl(42, 100%, 50%)",
+    color: "#FFB400",
   },
 ];

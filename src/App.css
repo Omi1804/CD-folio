@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Poppins:wght@400;500;600;700;800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* CSS VARIABLES  */
 :root {
@@ -61,6 +64,7 @@ textarea {
 body {
   background-color: var(--body-color);
   color: var(--text-color);
+  overscroll-behavior: none;
 }
 
 h1,
@@ -83,7 +87,7 @@ a {
 button,
 input,
 textarea {
-  background-color: transparent;
+  background-color: var(--body-color);
   border: none;
   outline: none;
 }
@@ -125,12 +129,14 @@ img {
   border: 1px solid var(--first-color);
   padding: 15px 70px 15px 35px;
   border-radius: 35px;
+  background-color: var(--body-color);
   font-family: var(--second-font);
   font-size: var(--small-font-size);
   font-weight: var(--weight-500);
   position: relative;
   overflow: hidden;
   transition: all 0.25s ease-in-out;
+  z-index: 3; /* Add this line */
 }
 
 .button:hover {
@@ -161,5 +167,9 @@ img {
   color: var(--text-white);
   font-size: var(--large-font-size);
   text-align: center;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   line-height: 60px;
 }

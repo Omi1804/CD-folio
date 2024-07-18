@@ -34,7 +34,9 @@ const Contact = () => {
 
           <div className="contact__info">
             <div className="info__item">
-              <FaEnvelopeOpen className="info__icon" />
+              <a href="mailto:om2021064@akgec.ac.in" className="info__icon">
+                <FaEnvelopeOpen />
+              </a>
               <div>
                 <span className="info__title">Mail me</span>
                 <h4 className="info__desc">om2021064@akgec.ac.in</h4>

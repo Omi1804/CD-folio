@@ -33,7 +33,7 @@
   font-size: var(--h1-font-size);
 }
 
-.home__title span {
+.home__title .Intro {
   color: var(--first-color);
 }
 

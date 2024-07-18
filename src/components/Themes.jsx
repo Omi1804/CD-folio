@@ -1,86 +1,100 @@
-import React, { useEffect, useState } from 'react'
-import { themes } from '../data'
-import ThemeItem from './ThemeItem'
-import { FaCog } from 'react-icons/fa'
-import {BsSun, BsMoon} from 'react-icons/bs'
-import "./Themes.css"
+import React, { useEffect, useState } from "react";
+import { themes } from "../data";
+import ThemeItem from "./ThemeItem";
+import { FaCog } from "react-icons/fa";
+import { BsMoonStarsFill } from "react-icons/bs";
+import { FaSun } from "react-icons/fa";
+import "./Themes.css";
 
-const getStorageColor = () =>{
-    let color = 'hsl(271, 76%, 53%)'
-    if(localStorage.getItem('color'))
-    {
-        color = localStorage.getItem('color')
-    }
-    return color;
-}
-
-const getStorageTheme = () =>{
-    let theme = 'dark-theme'
-    if(localStorage.getItem('theme'))
-    {
-        theme = localStorage.getItem('theme')
-    }
-    return theme;
-}
+const getStorageColor = () => {
+  let color = "hsl(271, 76%, 53%)";
+  if (localStorage.getItem("color")) {
+    color = localStorage.getItem("color");
+  }
+  return color;
+};
+const getStorageTheme = () => {
+  let theme = "dark-theme";
+  if (localStorage.getItem("theme")) {
+    theme = localStorage.getItem("theme");
+  }
+  return theme;
+};
 
 const Themes = () => {
+  const [showSwitcher, setShowSwitcher] = useState(false);
+  const [color, setColor] = useState(getStorageColor());
+  const [theme, setTheme] = useState(getStorageTheme());
 
-    const [showSwitcher, setShowSwitcher] = useState(false)
-    const [color,setColor] = useState(getStorageColor());
-    const [theme,setTheme] = useState(getStorageTheme());
+  const changeColor = (color) => {
+    setColor(color);
+  };
 
-    const changeColor = (color)=>{
-        setColor(color)
+  const toggleTheme = () => {
+    if (theme === "light-theme") {
+      setTheme("dark-theme");
+    } else {
+      setTheme("light-theme");
     }
+  };
 
-    const toggleTheme = () =>{
-        if(theme==='light-theme')
-        {
-            setTheme('dark-theme')
-        }
-        else{
-            setTheme('light-theme')
-        }
+  useEffect(() => {
+    document.documentElement.style.setProperty("--first-color", color);
+    localStorage.setItem("color", color);
+    console.log("running");
+  }, [color]);
+
+  useEffect(() => {
+    document.documentElement.className = theme;
+    const body = document.body;
+    if (theme === "dark-theme") {
+      body.classList.add("dark");
+      body.classList.remove("light");
+    } else {
+      body.classList.add("light");
+      body.classList.remove("dark");
     }
-
-    useEffect(()=>{
-        document.documentElement.style.setProperty('--first-color',color)
-        localStorage.setItem('color',color)
-    },[color])
-
-    useEffect(()=>{
-        document.documentElement.className = theme;
-        localStorage.setItem('theme',theme)
-    },[theme])
+    localStorage.setItem("theme", theme);
+  }, [theme]);
 
   return (
     <div>
-        <div className={`${showSwitcher ? 'show__switcher' : ''} style__switcher`}>
-            <div className="style__switcher-toggler"
-             onClick={()=>setShowSwitcher(!showSwitcher)}>
-                <FaCog/>
-            </div>
-
-            <div className="theme__toggler" onClick={toggleTheme}>
-                {theme === 'light-theme' ? <BsMoon/> : <BsSun/>}
-            </div>
-
-            <h3 className="style__switcher-title">Style Switcher</h3>
-            <div className="style__switcher-items">
-                {themes.map((theme,index)=>{
-                    return (
-                        <ThemeItem key={index} {...theme} changeColor={changeColor}/>
-                    )
-                })}
-            </div>
-
-            <div 
-            className="style__switcher-close"
-            onClick={()=>setShowSwitcher(!showSwitcher)}
-            >&times;</div>
+      <div
+        className={`${showSwitcher ? "show__switcher" : ""} style__switcher`}
+      >
+        <div
+          className="style__switcher-toggler"
+          onClick={() => setShowSwitcher(!showSwitcher)}
+        >
+          <FaCog />
         </div>
-    </div>
-  )
-}
 
-export default Themes
+        <div className="theme__toggler" onClick={toggleTheme}>
+          {theme === "light-theme" ? (
+            <BsMoonStarsFill />
+          ) : (
+            <FaSun style={{ fontSize: "1.4rem" }} />
+          )}
+        </div>
+
+        <h3 className="style__switcher-title">Style Switcher</h3>
+        <div className="style__switcher-items">
+          {themes.map((theme, index) => {
+            return (
+              <ThemeItem key={index} {...theme} changeColor={changeColor} />
+            );
+          })}
+        </div>
+
+        <div
+          className="style__switcher-close"
+          onClick={() => setShowSwitcher(!showSwitcher)}
+        >
+          &times;
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Themes;

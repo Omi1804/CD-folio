@@ -34,7 +34,9 @@
 .stats__box {
   border: 1px solid var(--border-color);
   padding: 20px 30px 25px;
+  height: 100%;
   border-radius: 5px;
+  background-color: var(--body-color);
 }
 
 .stats__no {
@@ -62,12 +64,21 @@
 
 .separator {
   border-top: 0.1px solid var(--border-color);
-  max-width: 40%;
+  max-width: 50%;
   margin: 72px auto 56px;
+  height: 2px; /* Adjust thickness of the tubelight */
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.75),
+    rgba(255, 255, 255, 0.3)
+  );
+  border-radius: 5px;
 }
 
 .subtitle__center {
   text-align: center;
+
   margin-bottom: 50px;
 }
 
@@ -118,8 +129,16 @@
   content: "";
   position: absolute;
   inset-block: 0;
+  width: 2px;
   left: 20px;
   border-left: 0.1px solid var(--border-color); /* for left lines in the expreience and education */
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.794),
+    rgba(255, 255, 255, 0.3)
+  );
+  border-radius: 5px;
 }
 
 .resume__icon {
@@ -179,6 +198,9 @@
 .button_container {
   display: flex;
   padding-inline: 5rem;
+
+  justify-content: center;
+  align-items: center;
   margin-inline: 2rem;
 }
 
@@ -203,7 +225,7 @@
   }
 
   .stats__box {
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
   }
 
   .skills__container {
