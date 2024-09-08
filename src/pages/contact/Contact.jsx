@@ -1,5 +1,5 @@
 import React from "react";
-
+import { motion } from "framer-motion";
 import {
   FaEnvelopeOpen,
   FaPhoneSquareAlt,
@@ -9,22 +9,46 @@ import {
   FaLinkedin,
   FaGithub,
 } from "react-icons/fa";
-
 import { GrInstagram } from "react-icons/gr";
-
 import { FiSend } from "react-icons/fi";
-
 import "./Contact.css";
 
 const Contact = () => {
-  return (
-    <section className="contact section">
-      <h2 className="section__title">
-        Get In <span>Touch</span>
-      </h2>
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
 
-      <div className="contact__container container grid">
-        <div className="contact__data">
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 0.5 },
+    },
+  };
+
+  return (
+    <motion.section
+      className="contact section"
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+    >
+      <motion.h2 className="section__title" variants={itemVariants}>
+        Get In <span>Touch</span>
+      </motion.h2>
+
+      <motion.div
+        className="contact__container container grid"
+        variants={containerVariants}
+      >
+        <motion.div className="contact__data" variants={itemVariants}>
           <h3 className="contact__title">Don't be Shy !</h3>
           <p className="contact__description">
             Feel free to get in touch with me. I am always open to discussing
@@ -33,7 +57,11 @@ const Contact = () => {
           </p>
 
           <div className="contact__info">
-            <div className="info__item">
+            <motion.div
+              className="info__item"
+              variants={itemVariants}
+              whileHover={{ scale: 1.05 }}
+            >
               <a href="mailto:om2021064@akgec.ac.in" className="info__icon">
                 <FaEnvelopeOpen />
               </a>
@@ -41,91 +69,96 @@ const Contact = () => {
                 <span className="info__title">Mail me</span>
                 <h4 className="info__desc">om2021064@akgec.ac.in</h4>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="info__item">
+            <motion.div
+              className="info__item"
+              variants={itemVariants}
+              whileHover={{ scale: 1.05 }}
+            >
               <FaPhoneSquareAlt className="info__icon" />
               <div>
                 <span className="info__title">Call me</span>
                 <h4 className="info__desc">+91 7753951732</h4>
               </div>
-            </div>
+            </motion.div>
           </div>
 
-          <div className="contact__socials">
-            <a
-              href="https://www.linkedin.com/in/om-nigam-64247323b/"
-              className="contact__social-link"
-            >
-              <FaLinkedin />
-            </a>
+          <motion.div className="contact__socials" variants={containerVariants}>
+            {[
+              {
+                icon: <FaLinkedin />,
+                href: "https://www.linkedin.com/in/om-nigam-64247323b/",
+              },
+              {
+                icon: <GrInstagram />,
+                href: "https://www.instagram.com/yu_know_om/",
+              },
+              { icon: <FaGithub />, href: "https://github.com/Omi1804" },
+              {
+                icon: <FaFacebook />,
+                href: "https://www.facebook.com/om.nigam.7146",
+              },
+            ].map((social, index) => (
+              <motion.a
+                key={index}
+                href={social.href}
+                className="contact__social-link"
+                variants={itemVariants}
+                whileHover={{ scale: 1.2, rotate: 5 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                {social.icon}
+              </motion.a>
+            ))}
+          </motion.div>
+        </motion.div>
 
-            <a
-              href="https://www.instagram.com/yu_know_om/"
-              className="contact__social-link"
-            >
-              <GrInstagram />
-            </a>
+        <motion.form className="contact__form" variants={containerVariants}>
+          <motion.div
+            className="form__input-group"
+            variants={containerVariants}
+          >
+            {["Your Name", "Your Email", "Your Subject"].map(
+              (placeholder, index) => (
+                <motion.div
+                  key={index}
+                  className="form__input-div"
+                  variants={itemVariants}
+                >
+                  <motion.input
+                    type={index === 1 ? "email" : "text"}
+                    className="form__control"
+                    placeholder={placeholder}
+                    whileFocus={{ scale: 1.05 }}
+                  />
+                </motion.div>
+              )
+            )}
+          </motion.div>
 
-            <a
-              href="https://github.com/Omi1804"
-              className="contact__social-link"
-            >
-              <FaGithub />
-            </a>
-
-            <a
-              href="https://www.facebook.com/om.nigam.7146"
-              className="contact__social-link"
-            >
-              <FaFacebook />
-            </a>
-          </div>
-        </div>
-
-        <form className="contact__form">
-          <div className="form__input-group">
-            <div className="form__input-div">
-              <input
-                type="text"
-                className="form__control"
-                placeholder="Your Name"
-              />
-            </div>
-
-            <div className="form__input-div">
-              <input
-                type="email"
-                className="form__control"
-                placeholder="Your Email"
-              />
-            </div>
-
-            <div className="form__input-div">
-              <input
-                type="text"
-                className="form__control"
-                placeholder="Your Subject"
-              />
-            </div>
-          </div>
-
-          <div className="form__input-div">
-            <textarea
+          <motion.div className="form__input-div" variants={itemVariants}>
+            <motion.textarea
               placeholder="Your Message"
               className="form__control textarea"
-            ></textarea>
-          </div>
+              whileFocus={{ scale: 1.05 }}
+            ></motion.textarea>
+          </motion.div>
 
-          <button className="button">
+          <motion.button
+            className="button"
+            variants={itemVariants}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
             Send Message
             <span className="button__icon contact__button-icon">
               <FiSend />
             </span>
-          </button>
-        </form>
-      </div>
-    </section>
+          </motion.button>
+        </motion.form>
+      </motion.div>
+    </motion.section>
   );
 };
 
