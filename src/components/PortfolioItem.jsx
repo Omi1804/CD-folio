@@ -11,7 +11,7 @@ const PortfolioItem = ({ img, title, details }) => {
   };
 
   return (
-    <div className="portfolio__item">
+    <div className="portfolio__item shadow-lg">
       <img src={img} alt="" className="portfolio__img" loading="lazy" />
 
       <div className="portfolio__hover" onClick={toggleModal}>

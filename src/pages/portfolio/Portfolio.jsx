@@ -27,7 +27,7 @@ const Portfolio = () => {
           setTimeout(() => {
             setVisibleItems((prevVisibleItems) => prevVisibleItems + 6);
             setLoading(false);
-          }, 500);
+          }, 1000);
         }
       });
       if (node) observer.current.observe(node);

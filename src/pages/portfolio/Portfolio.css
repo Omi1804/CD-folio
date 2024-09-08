@@ -4,17 +4,18 @@ a {
 
 .portfolio__container {
   grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
 .portfolio__item {
   position: relative;
   border-radius: 10px;
   overflow: hidden;
-  /* cursor: pointer; */
+  cursor: pointer;
 }
 
 .portfolio__img {
-  height: 250px;
+  height: 290px;
   width: 100%;
   object-fit: cover;
   vertical-align: middle;
