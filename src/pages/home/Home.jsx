@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import Profile from "../../assets/cover_photo.png";
 import { Link } from "react-router-dom";

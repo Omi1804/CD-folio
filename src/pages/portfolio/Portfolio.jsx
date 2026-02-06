@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, useCallback } from "react";
+import { useEffect, useState, useRef, useCallback } from "react";
 import { motion } from "framer-motion";
 import { portfolio } from "../../data";
 import PortfolioItem from "../../components/PortfolioItem";
@@ -32,7 +32,7 @@ const Portfolio = () => {
       });
       if (node) observer.current.observe(node);
     },
-    [loading, visibleItems]
+    [loading, visibleItems],
   );
 
   const containerVariants = {

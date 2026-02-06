@@ -88,7 +88,7 @@ export const personalInfo = [
   {
     id: 2,
     title: "Age : ",
-    description: "22 Years",
+    description: "25 Years",
   },
 
   {
@@ -100,7 +100,7 @@ export const personalInfo = [
   {
     id: 4,
     title: "Address : ",
-    description: "Ghaziabad",
+    description: "Delhi, India",
   },
 
   {
@@ -112,7 +112,7 @@ export const personalInfo = [
   {
     id: 6,
     title: "Email : ",
-    description: "om2021064@akgec.ac.in",
+    description: "devomini18@gmail.com",
   },
 ];
 
