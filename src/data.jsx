@@ -1,15 +1,12 @@
 import {
   FaBriefcase,
-  FaCode,
   FaEnvelopeOpen,
   FaFolderOpen,
   FaGraduationCap,
   FaHome,
   FaUser,
-  FaGithub,
 } from "react-icons/fa";
-import { TbFileDescription } from "react-icons/tb";
-import { FiExternalLink, FiFileText, FiUser } from "react-icons/fi";
+import { FiExternalLink } from "react-icons/fi";
 import { HiCode } from "react-icons/hi";
 
 import Work1 from "./assets/project-1.png";
@@ -36,6 +33,8 @@ import Work21 from "./assets/project-21.png";
 import Work22 from "./assets/project-22.png";
 import Work23 from "./assets/project-23.png";
 import Work24 from "./assets/project-24.png";
+import Work25 from "./assets/project-25.png";
+import Work26 from "./assets/project-26.png";
 
 import Theme4 from "./assets/blue.png";
 import Theme3 from "./assets/blueviolet.png";
@@ -75,6 +74,59 @@ export const links = [
     name: "Contact",
     icon: <FaEnvelopeOpen className="nav__icon" />,
     path: "/contact",
+  },
+];
+
+export const themes = [
+  {
+    id: 1,
+    img: Theme1,
+    color: "#6760A4",
+  },
+  {
+    id: 2,
+    img: Theme2,
+    color: "#FA3737",
+  },
+  {
+    id: 3,
+    img: Theme3,
+    color: "#B55DFF",
+  },
+  {
+    id: 4,
+    img: Theme4,
+    color: "#4C7DFF",
+  },
+  {
+    id: 5,
+    img: Theme5,
+    color: "#DCA620",
+  },
+  {
+    id: 6,
+    img: Theme6,
+    color: "#FF6FAB",
+  },
+  {
+    id: 7,
+    img: Theme7,
+    color: "#80C76A",
+  },
+  {
+    id: 8,
+    img: Theme8,
+    color: "#FF6532",
+  },
+  {
+    id: 9,
+    img: Theme9,
+    color: "#69A933",
+  },
+  {
+    id: 10,
+    img: Theme10,
+    color: "#FFB400",
   },
 ];
 
@@ -131,28 +183,20 @@ export const stats = [
 
   {
     id: 3,
-    no: "20+",
+    no: "30+",
     title: "Happy <br /> Customers",
   },
 
   {
     id: 4,
-    no: "2+",
+    no: "3+",
     title: " Years <br /> Experience",
   },
 ];
 
-export const resume = [
+export const Experience = [
   {
-    id: 101,
-    category: "experience",
-    icon: <FaBriefcase />,
-    year: "2023 / JUL",
-    title: "Full Stack Developer Intern <span> The Adz Plug </span>",
-    desc: "Led the development and deployment of several full-stack web applications, enhancing user experience and business functionality. <br/><br/>  Implemented performance optimizations, achieving a 30% improvement in page load times. <br/><br/> Ensured high availability and security standards in deploying websites to production environments.",
-  },
-  {
-    id: 100,
+    id: 1,
     category: "experience",
     icon: <FaBriefcase />,
     year: "2023 / MAY",
@@ -160,8 +204,47 @@ export const resume = [
     desc: "Pioneered the design and development of several user-centric websites, leveraging modern frameworks and cross-functional collaboration. Enhanced UI/UX, resulting in a 5% increase in user engagement and reach.",
   },
   {
-    id: 103,
+    id: 2,
     category: "experience",
+    icon: <FaBriefcase />,
+    year: "2023 / JUL - 2023 / SEP",
+    title: "Full Stack Developer Intern <span> The Adz Plug </span>",
+    desc: "Led the development and deployment of several full-stack web applications, enhancing user experience and business functionality. <br/><br/>  Implemented performance optimizations, achieving a 30% improvement in page load times. <br/><br/> Ensured high availability and security standards in deploying websites to production environments.",
+  },
+  {
+    id: 3,
+    category: "experience",
+    icon: <FaBriefcase />,
+    year: "2024 / JUL - 2025 / FEB",
+    title: "Software Developer Engineer <span> Starportal Pvt. Ltd. </span>",
+    desc: `
+    • Leading the development of a blockchain-integrated DeFi platform that consolidates lending, borrowing, staking, and other protocols into a single platform, resulting in a 15% increase in user engagement and improved transaction trust.<br><br>
+    • Developed and scaled a Telegram mini-app serving over 300,000+ active users, achieving a 200% improvement in API response times through Docker, Redis, and AWS EC2.<br><br>
+    • Optimized frontend performance by reducing page load times by 35%, utilizing Next.js, React.js, TypeScript, and Tailwind CSS to deliver seamless user experiences.<br><br>
+    • Strengthened platform security by implementing advanced mechanisms like JWT authentication and Zod validation, achieving a 60% improvement in system integrity.<br><br>
+`,
+  },
+  {
+    id: 4,
+    category: "experience",
+    icon: <FaBriefcase />,
+    year: "2025 / FEB - PRESENT",
+    title: "Senior Frontend Developer <span> Accelerate Labs - Neobase </span>",
+    desc: `
+      • Built D3-based Bubble Maps for wallet cluster visualization, optimizing force-graph rendering through staged lifecycle
+        control, improving interaction latency by 30%.<br><br>
+      • Improved performance in Funnel.markets via SSR/CSR tuning, lazy loading, modular architecture, proxy routing, and
+        debounced state management.<br><br>
+      • Implemented GraphQL + URQL caching and optimized subgraph queries, reducing redundant requests by 25% and improve
+        real-time on-chain data latency/responsiveness.<br><br>
+    `,
+  },
+];
+
+export const Achievements = [
+  {
+    id: 1,
+    category: "achievements",
     icon: <FaBriefcase />,
     year: "2023 / SEP",
     title: "Amazon Web Services - <span> Associate Solution Architect </span> ",
@@ -169,16 +252,16 @@ export const resume = [
   },
 
   {
-    id: 1,
-    category: "experience",
+    id: 2,
+    category: "achievements",
     icon: <FaBriefcase />,
     year: "2023 / APRIL",
     title: "Winner of Inter College Blockchain Hackathon<span> AKGEC </span>",
     desc: "Successfully secured 1st rank on hackathon organised by AKGEC in blockchain domain",
   },
   {
-    id: 2,
-    category: "experience",
+    id: 3,
+    category: "achievements",
     icon: <FaBriefcase />,
     year: "2023 / MARCH",
     title: "Top 5 RunnerUP<span> Rajasthan Hackathon </span>",
@@ -186,26 +269,28 @@ export const resume = [
   },
 
   {
-    id: 3,
-    category: "experience",
+    id: 4,
+    category: "achievements",
     icon: <FaBriefcase />,
     year: "2022 / 08 - 2022 / 12",
     title: "Data Structure & Algorithm <span> Internship </span>",
     desc: "From AKGEC skills I have gained Internship opportunity to gain hands-on experience in implementing and optimizing data structures and algorithms for efficient problem-solving.",
   },
+];
 
+export const Education = [
   {
-    id: 4,
+    id: 1,
     category: "education",
     icon: <FaGraduationCap />,
     year: "2020 - 2024",
     title:
       "Bachelor of Technology <span> Ajay Kumar Garg Engineering College </span>",
-    desc: "Currently in 3rd Year of college",
+    desc: "CGPA - 9.02/10, Major - Computer Science and Engineering",
   },
 
   {
-    id: 5,
+    id: 2,
     category: "education",
     icon: <FaGraduationCap />,
     year: "2019",
@@ -215,13 +300,16 @@ export const resume = [
   },
 
   {
-    id: 6,
+    id: 3,
     category: "education",
     icon: <FaGraduationCap />,
     year: "2017",
     title: "High School <span> Dr. Virendra Swarup Education Centre</span>",
     desc: "CGPA - 10/10",
   },
+];
+
+export const Projects = [
   {
     id: 21,
     category: "projects",
@@ -511,91 +599,197 @@ export const skills = [
 
 export const portfolio = [
   {
-    id: 23,
-    img: Work23,
-    title: "Skill Sphere",
+    id: 1,
+    img: Work15,
+    title: "News Portal",
     details: [
       {
         icon: <FiExternalLink />,
-        title: "Website : ",
-        desc: `<a href="https://next-skill-sphere.vercel.app/" target='blank'>https://next-skill-sphere.vercel.app/</a>`,
-      },
-    ],
-  },
-  {
-    id: 21,
-    img: Work21,
-    title: "SNACK MEDIA",
-    details: [
-      {
-        icon: <FiExternalLink />,
-        title: "Website : ",
-        desc: `<a href="https://socialsphere-fun.netlify.app/" target='blank'>https://socialsphere-fun.netlify.app/</a>`,
-      },
-    ],
-  },
-  {
-    id: 24,
-    img: Work24,
-    title: "Wallie Expo",
-    details: [
-      {
-        icon: <FiExternalLink />,
-        title: "Website : ",
-        desc: `<a href="https://drive.google.com/file/d/1dX2rKG6pF3p95n2-28JJYMae_yh8zxFk/view?usp=drive_link" target='blank'>Google Drive Link</a>`,
-      },
-    ],
-  },
-  {
-    id: 20,
-    img: Work20,
-    title: "COURSE LELO",
-    details: [
-      {
-        icon: <FiExternalLink />,
-        title: "Website : ",
-        desc: `<a href="https://github.com/Omi1804/Course_Selling_App" target='blank'>https://github.com/Omi1804/Course_Selling_App</a>`,
-      },
-    ],
-  },
-  {
-    id: 22,
-    img: Work22,
-    title: "FB HELPDESK",
-    details: [
-      {
-        icon: <FiExternalLink />,
-        title: "Website : ",
-        desc: `<a href="https://github.com/Omi1804/FbHelpdesk" target='blank'>https://github.com/Omi1804/FbHelpdesk</a>`,
+        title: "Preview : ",
+        desc: "https://news-site.netlify.app",
       },
     ],
   },
   {
     id: 2,
-    img: Work16,
-    title: "AI ArtHUB",
+    img: Work14,
+    title: "Modern UI/UX Website",
     details: [
       {
         icon: <FiExternalLink />,
-        title: "Website : ",
-        desc: `<a href="https://ai-image-fun.netlify.app" target='blank'>https://ai-image-fun.netlify.app</a>`,
+        title: "Preview : ",
+        desc: '<a target=`blanck` href="https://modern-sitefun.netlify.app">https://modern-sitefun.netlify.app</a>',
+      },
+    ],
+  },
+  {
+    id: 3,
+    img: Work13,
+    title: "OMIFLIX",
+    details: [
+      {
+        icon: <FiExternalLink />,
+        title: "Preview : ",
+        desc: '<a target=`blanck` href="https://omiflix.netlify.app">https://omiflix.netlify.app</a>',
+      },
+    ],
+  },
+  {
+    id: 4,
+    img: Work10,
+    title: "Digital Media Website",
+    details: [
+      {
+        icon: <FiExternalLink />,
+        title: "Preview : ",
+        desc: '<a target=`blanck` href="https://modern-digitalmedia-website.netlify.app">https://modern-digitalmedia-website.netlify.app</a>',
+      },
+    ],
+  },
+  {
+    id: 5,
+    img: Work12,
+    title: "AUDIO MEDIA PLAYER",
+    details: [
+      {
+        icon: <FiExternalLink />,
+        title: "Preview : ",
+        desc: '<a target=`blanck` href="https://music-nfun.netlify.app">https://music-nfun.netlify.app</a>',
+      },
+    ],
+  },
+  {
+    id: 6,
+    img: Work11,
+    title: "An Intractive Game",
+    details: [
+      {
+        icon: <FiExternalLink />,
+        title: "Preview : ",
+        desc: '<a target=`blanck` href="https://snake-nfun.netlify.app">https://snake-nfun.netlify.app</a>',
+      },
+    ],
+  },
+  {
+    id: 7,
+    img: Work9,
+    title: "Classical PortFolio",
+    details: [
+      {
+        icon: <FiExternalLink />,
+        title: "Preview : ",
+        desc: '<a target=`blanck` href="https://classical-portfolio.netlify.app">https://classical-portfolio.netlify.app</a>',
+      },
+    ],
+  },
+  {
+    id: 8,
+    img: Work8,
+    title: "MODULAR WEBSITE",
+    details: [
+      {
+        icon: <FiExternalLink />,
+        title: "Preview : ",
+        desc: '<a target=`blanck` href="https://full-modular-webiste.onrender.com">https://full-modular-webiste.onrender.com</a>',
+      },
+    ],
+  },
+  {
+    id: 9,
+    img: Work7,
+    title: "Admin Manager",
+    details: [
+      {
+        icon: <FiExternalLink />,
+        title: "Preview : ",
+        desc: '<a target=`blanck` href="https://admin-dashbord.onrender.com">https://admin-dashbord.onrender.com</a>',
+      },
+    ],
+  },
+  {
+    id: 10,
+    img: Work6,
+    title: "Meme Generator",
+    details: [
+      {
+        icon: <FiExternalLink />,
+        title: "Preview : ",
+        desc: '<a target=`blanck` href="https://meme-generatorfun.netlify.app">https://meme-generatorfun.netlify.app</a>',
+      },
+    ],
+  },
+  {
+    id: 11,
+    img: Work5,
+    title: "Modern UI Notes App",
+    details: [
+      {
+        title: "Preview : ",
+        desc: '<a target=`blanck` href="https://notetakingfun.netlify.app">https://notetakingfun.netlify.app</a>',
       },
     ],
   },
 
   {
-    id: 1,
-    img: Work1,
-    title: "Ø•M•Ī",
+    id: 12,
+    img: Work4,
+    title: "TENZIES",
+    details: [
+      {
+        icon: <FiExternalLink />,
+        title: "Preview : ",
+        desc: '<a target=`blanck` href="https://tenzies-fungame.netlify.app/">https://tenzies-fungame.netlify.app/</a>',
+      },
+    ],
+  },
+  {
+    id: 13,
+    img: Work3,
+    title: "Speeder",
+    details: [
+      {
+        icon: <FiExternalLink />,
+        title: "Preview : ",
+        desc: '<a target=`blanck` href="https://speed-typing-fun.netlify.app">https://speed-typing-fun.netlify.app</a>',
+      },
+    ],
+  },
+  {
+    id: 14,
+    img: Work2,
+    title: "Quizzical",
+    details: [
+      {
+        icon: <FiExternalLink />,
+        title: "Preview : ",
+        desc: '<a target=`blanck` href="https://quizzical-fun.netlify.app">https://quizzical-fun.netlify.app</a>',
+      },
+    ],
+  },
+  {
+    id: 15,
+    img: Work19,
+    title: "WORKOUT PLANNER ",
     details: [
       {
         icon: <FiExternalLink />,
         title: "Website : ",
-        desc: `<a href="https://omierse.netlify.app" target='blank'>https://omierse.netlify.app</a>`,
+        desc: `<a href="https://workout-helperfun.netlify.app/" target='blank'>https://workout-helperfun.netlify.app/</a>`,
       },
     ],
   },
-
+  {
+    id: 16,
+    img: Work18,
+    title: "DISNEY CLONE ",
+    details: [
+      {
+        icon: <FiExternalLink />,
+        title: "Website : ",
+        desc: `<a href="https://disneyplus-clone-6f5aa.web.app" target='blank'>https://disneyplus-clone-6f5aa.web.app</a>`,
+      },
+    ],
+  },
   {
     id: 17,
     img: Work17,
@@ -608,262 +802,112 @@ export const portfolio = [
       },
     ],
   },
-
   {
     id: 18,
-    img: Work18,
-    title: "DISNEY CLONE ",
+    img: Work1,
+    title: "Ø•M•Ī",
     details: [
       {
         icon: <FiExternalLink />,
         title: "Website : ",
-        desc: `<a href="https://disneyplus-clone-6f5aa.web.app" target='blank'>https://disneyplus-clone-6f5aa.web.app</a>`,
+        desc: `<a href="https://omierse.netlify.app" target='blank'>https://omierse.netlify.app</a>`,
       },
     ],
   },
   {
     id: 19,
-    img: Work19,
-    title: "WORKOUT PLANNER ",
+    img: Work16,
+    title: "AI ArtHUB",
     details: [
       {
         icon: <FiExternalLink />,
         title: "Website : ",
-        desc: `<a href="https://workout-helperfun.netlify.app/" target='blank'>https://workout-helperfun.netlify.app/</a>`,
+        desc: `<a href="https://ai-image-fun.netlify.app" target='blank'>https://ai-image-fun.netlify.app</a>`,
       },
     ],
   },
-
   {
-    id: 3,
-    img: Work2,
-    title: "Quizzical",
+    id: 20,
+    img: Work22,
+    title: "FB HELPDESK",
     details: [
       {
         icon: <FiExternalLink />,
-        title: "Preview : ",
-        desc: '<a target=`blanck` href="https://quizzical-fun.netlify.app">https://quizzical-fun.netlify.app</a>',
+        title: "Website : ",
+        desc: `<a href="https://github.com/Omi1804/FbHelpdesk" target='blank'>https://github.com/Omi1804/FbHelpdesk</a>`,
       },
     ],
   },
-
   {
-    id: 4,
-    img: Work3,
-    title: "Speeder",
+    id: 21,
+    img: Work20,
+    title: "COURSE LELO",
     details: [
       {
         icon: <FiExternalLink />,
-        title: "Preview : ",
-        desc: '<a target=`blanck` href="https://speed-typing-fun.netlify.app">https://speed-typing-fun.netlify.app</a>',
+        title: "Website : ",
+        desc: `<a href="https://github.com/Omi1804/Course_Selling_App" target='blank'>https://github.com/Omi1804/Course_Selling_App</a>`,
       },
     ],
   },
-
   {
-    id: 5,
-    img: Work4,
-    title: "TENZIES",
+    id: 22,
+    img: Work24,
+    title: "Wallie Expo",
     details: [
       {
         icon: <FiExternalLink />,
-        title: "Preview : ",
-        desc: '<a target=`blanck` href="https://tenzies-fungame.netlify.app/">https://tenzies-fungame.netlify.app/</a>',
+        title: "Website : ",
+        desc: `<a href="https://drive.google.com/file/d/1dX2rKG6pF3p95n2-28JJYMae_yh8zxFk/view?usp=drive_link" target='blank'>Google Drive Link</a>`,
       },
     ],
   },
-
   {
-    id: 6,
-    img: Work5,
-    title: "Modern UI Notes App",
-    details: [
-      {
-        title: "Preview : ",
-        desc: '<a target=`blanck` href="https://notetakingfun.netlify.app">https://notetakingfun.netlify.app</a>',
-      },
-    ],
-  },
-
-  {
-    id: 7,
-    img: Work6,
-    title: "Meme Generator",
+    id: 23,
+    img: Work21,
+    title: "SNACK MEDIA",
     details: [
       {
         icon: <FiExternalLink />,
-        title: "Preview : ",
-        desc: '<a target=`blanck` href="https://meme-generatorfun.netlify.app">https://meme-generatorfun.netlify.app</a>',
+        title: "Website : ",
+        desc: `<a href="https://socialsphere-fun.netlify.app/" target='blank'>https://socialsphere-fun.netlify.app/</a>`,
       },
     ],
   },
-
   {
-    id: 8,
-    img: Work7,
-    title: "Admin Manager",
+    id: 24,
+    img: Work23,
+    title: "Skill Sphere",
     details: [
       {
         icon: <FiExternalLink />,
-        title: "Preview : ",
-        desc: '<a target=`blanck` href="https://admin-dashbord.onrender.com">https://admin-dashbord.onrender.com</a>',
+        title: "Website : ",
+        desc: `<a href="https://next-skill-sphere.vercel.app/" target='blank'>https://next-skill-sphere.vercel.app/</a>`,
       },
     ],
   },
-
   {
-    id: 9,
-    img: Work8,
-    title: "MODULAR WEBSITE",
+    id: 25,
+    img: Work25,
+    title: "Bubble Maps",
     details: [
       {
         icon: <FiExternalLink />,
-        title: "Preview : ",
-        desc: '<a target=`blanck` href="https://full-modular-webiste.onrender.com">https://full-modular-webiste.onrender.com</a>',
+        title: "Website : ",
+        desc: `<a href="https://bubblemaps.devomini.com/" target='blank'>https://bubblemaps.devomini.com/</a>`,
       },
     ],
   },
   {
-    id: 10,
-    img: Work9,
-    title: "Classical PortFolio",
+    id: 26,
+    img: Work26,
+    title: "Funnel Markets",
     details: [
       {
         icon: <FiExternalLink />,
-        title: "Preview : ",
-        desc: '<a target=`blanck` href="https://classical-portfolio.netlify.app">https://classical-portfolio.netlify.app</a>',
+        title: "Website : ",
+        desc: `<a href="https://funnel.markets/" target='blank'>https://funnel.markets/</a>`,
       },
     ],
   },
-
-  {
-    id: 11,
-    img: Work10,
-    title: "Digital Media Website",
-    details: [
-      {
-        icon: <FiExternalLink />,
-        title: "Preview : ",
-        desc: '<a target=`blanck` href="https://modern-digitalmedia-website.netlify.app">https://modern-digitalmedia-website.netlify.app</a>',
-      },
-    ],
-  },
-
-  {
-    id: 12,
-    img: Work11,
-    title: "An Intractive Game",
-    details: [
-      {
-        icon: <FiExternalLink />,
-        title: "Preview : ",
-        desc: '<a target=`blanck` href="https://snake-nfun.netlify.app">https://snake-nfun.netlify.app</a>',
-      },
-    ],
-  },
-
-  {
-    id: 13,
-    img: Work12,
-    title: "AUDIO MEDIA PLAYER",
-    details: [
-      {
-        icon: <FiExternalLink />,
-        title: "Preview : ",
-        desc: '<a target=`blanck` href="https://music-nfun.netlify.app">https://music-nfun.netlify.app</a>',
-      },
-    ],
-  },
-
-  {
-    id: 14,
-    img: Work13,
-    title: "OMIFLIX",
-    details: [
-      {
-        icon: <FiExternalLink />,
-        title: "Preview : ",
-        desc: '<a target=`blanck` href="https://omiflix.netlify.app">https://omiflix.netlify.app</a>',
-      },
-    ],
-  },
-
-  {
-    id: 15,
-    img: Work14,
-    title: "Modern UI/UX Website",
-    details: [
-      {
-        icon: <FiExternalLink />,
-        title: "Preview : ",
-        desc: '<a target=`blanck` href="https://modern-sitefun.netlify.app">https://modern-sitefun.netlify.app</a>',
-      },
-    ],
-  },
-
-  {
-    id: 16,
-    img: Work15,
-    title: "News Portal",
-    details: [
-      {
-        icon: <FiExternalLink />,
-        title: "Preview : ",
-        desc: "https://news-site.netlify.app",
-      },
-    ],
-  },
-];
-
-export const themes = [
-  {
-    id: 1,
-    img: Theme1,
-    color: "#6760A4",
-  },
-  {
-    id: 2,
-    img: Theme2,
-    color: "#FA3737",
-  },
-  {
-    id: 3,
-    img: Theme3,
-    color: "#B55DFF",
-  },
-  {
-    id: 4,
-    img: Theme4,
-    color: "#4C7DFF",
-  },
-  {
-    id: 5,
-    img: Theme5,
-    color: "#DCA620",
-  },
-  {
-    id: 6,
-    img: Theme6,
-    color: "#FF6FAB",
-  },
-  {
-    id: 7,
-    img: Theme7,
-    color: "#80C76A",
-  },
-  {
-    id: 8,
-    img: Theme8,
-    color: "#FF6532",
-  },
-  {
-    id: 9,
-    img: Theme9,
-    color: "#69A933",
-  },
-  {
-    id: 10,
-    img: Theme10,
-    color: "#FFB400",
-  },
-];
+].reverse();

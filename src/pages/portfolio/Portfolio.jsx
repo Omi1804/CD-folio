@@ -70,7 +70,7 @@ const Portfolio = () => {
       >
         {portfolio.slice(0, visibleItems).map((item, index) => (
           <motion.div
-            key={item.id}
+            key={item.id * index}
             variants={itemVariants}
             ref={index === visibleItems - 1 ? lastPortfolioItemRef : null}
           >

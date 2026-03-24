@@ -7,7 +7,7 @@ import Stats from "../../components/Stats";
 import ResumeItem from "../../components/ResumeItem";
 import CV from "../../assets/OmNigamResume.pdf";
 import Skills from "../../components/Skills";
-import { resume } from "../../data";
+import { Achievements, Education, Experience, Projects } from "../../data";
 import "./About.css";
 
 const About = () => {
@@ -90,18 +90,20 @@ const About = () => {
 
         <div className="resume__container grid">
           <motion.div className="resume__data" variants={itemVariants}>
-            <h3 className="section__subtitle subtitle__center">Achievements</h3>
-            {resume.map((val) => {
-              if (val.category === "experience") {
-                return <ResumeItem key={val.id} {...val} />;
-              }
+            <h3 className="section__subtitle subtitle__center">Experience</h3>
+            {Experience.reverse().map((val) => {
+              return <ResumeItem key={val.id} {...val} />;
             })}
+
+            <h3 className="section__subtitle subtitle__center">Achievements</h3>
+            {Achievements.map((val) => {
+              return <ResumeItem key={val.id} {...val} />;
+            })}
+
             <h3 className="section__subtitle subtitle__center">Education</h3>
             <div className="resume__data">
-              {resume.map((val) => {
-                if (val.category === "education") {
-                  return <ResumeItem key={val.id} {...val} />;
-                }
+              {Education.map((val) => {
+                return <ResumeItem key={val.id} {...val} />;
               })}
             </div>
           </motion.div>
@@ -111,26 +113,9 @@ const About = () => {
               <h3 className="section__subtitle subtitle__center resume_title ">
                 Projects
               </h3>
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Link
-                  to="/portfolio"
-                  className="button resume_button"
-                  style={{ margin: "1rem" }}
-                >
-                  See Previews{" "}
-                  <span className="button__icon">
-                    <FaArrowRight />
-                  </span>
-                </Link>
-              </motion.div>
             </div>
-            {resume.map((val) => {
-              if (val.category === "projects") {
-                return <ResumeItem key={val.id} {...val} />;
-              }
+            {Projects.map((val) => {
+              return <ResumeItem key={val.id} {...val} />;
             })}
           </motion.div>
         </div>

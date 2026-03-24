@@ -1,14 +1,42 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Close from "../assets/close.svg";
 import parse from "html-react-parser";
 import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
 
 const PortfolioItem = ({ img, title, details }) => {
   const [modal, setModal] = useState(false);
+  const modalContentRef = useRef(null);
 
   const toggleModal = () => {
     setModal(!modal);
   };
+
+  useEffect(() => {
+    if (!modal) return;
+
+    const handlePointerDown = (event) => {
+      if (
+        modalContentRef.current &&
+        !modalContentRef.current.contains(event.target)
+      ) {
+        setModal(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handlePointerDown);
+    document.addEventListener("touchstart", handlePointerDown);
+    document.onkeydown = (event) => {
+      if (event.key === "Escape") {
+        setModal(false);
+      }
+    };
+
+    return () => {
+      document.removeEventListener("mousedown", handlePointerDown);
+      document.removeEventListener("touchstart", handlePointerDown);
+      document.onkeydown = null;
+    };
+  }, [modal]);
 
   return (
     <div className="portfolio__item shadow-lg">
@@ -22,32 +50,28 @@ const PortfolioItem = ({ img, title, details }) => {
         <div className="portfolio__modal">
           <CardContainer className="inter-var">
             <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] rounded-xl border ">
-              <div className="portfolio__modal-content">
-                <img
-                  src={Close}
-                  alt=""
-                  className="modal__close"
-                  onClick={toggleModal}
-                />
-
-                <CardItem translateZ="50" className="w-full">
+              <div ref={modalContentRef} className="portfolio__modal-content">
+                <CardItem translateZ="30" className="w-full">
                   <h3 className="modal__title">{title}</h3>
                 </CardItem>
 
-                <ul className="modal__list grid">
-                  {details.map(({ icon, title, desc }, index) => {
-                    return (
-                      <li
-                        className="modal__item cursor-pointer hover:text-blue-600"
-                        key={index}
-                      >
-                        <span className="item__icon">{icon}</span>
-                        <span className="item__title">{title}</span>
-                        <span className="item__details">{parse(desc)}</span>
-                      </li>
-                    );
-                  })}
-                </ul>
+                <CardItem translateZ="70" className="w-full">
+                  {" "}
+                  <ul className="modal__list grid">
+                    {details.map(({ icon, title, desc }, index) => {
+                      return (
+                        <li
+                          className="modal__item cursor-pointer hover:!text-blue-600"
+                          key={index}
+                        >
+                          <span className="item__icon">{icon}</span>
+                          <span className="item__title">{title}</span>
+                          <span className="item__details">{parse(desc)}</span>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </CardItem>
                 <CardItem translateZ="100" className="w-full mt-4">
                   <img src={img} alt="" className="modal__img" loading="lazy" />
                 </CardItem>
