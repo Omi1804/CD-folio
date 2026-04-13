@@ -62,12 +62,12 @@ const Contact = () => {
               variants={itemVariants}
               whileHover={{ scale: 1.05 }}
             >
-              <a href="mailto:om2021064@akgec.ac.in" className="info__icon">
+              <a href="mailto:devomini18@gmail.com" className="info__icon">
                 <FaEnvelopeOpen />
               </a>
               <div>
                 <span className="info__title">Mail me</span>
-                <h4 className="info__desc">om2021064@akgec.ac.in</h4>
+                <h4 className="info__desc">devomini18@gmail.com</h4>
               </div>
             </motion.div>
 
@@ -133,7 +133,7 @@ const Contact = () => {
                     whileFocus={{ scale: 1.05 }}
                   />
                 </motion.div>
-              )
+              ),
             )}
           </motion.div>
 
