@@ -877,12 +877,12 @@ export const portfolio = [
   {
     id: 24,
     img: Work23,
-    title: "Skill Sphere",
+    title: "eLearni Platform",
     details: [
       {
         icon: <FiExternalLink />,
         title: "Website : ",
-        desc: `<a href="https://next-skill-sphere.vercel.app/" target='blank'>https://next-skill-sphere.vercel.app/</a>`,
+        desc: `<a href="https://elearni.devomini.com/" target='blank'>https://elearni.devomini.com/</a>`,
       },
     ],
   },
