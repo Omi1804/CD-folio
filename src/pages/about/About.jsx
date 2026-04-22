@@ -5,7 +5,6 @@ import { FaArrowRight, FaDownload } from "react-icons/fa";
 import Info from "../../components/Info";
 import Stats from "../../components/Stats";
 import ResumeItem from "../../components/ResumeItem";
-import CV from "../../assets/OmNigamResume.pdf";
 import Skills from "../../components/Skills";
 import { Achievements, Education, Experience, Projects } from "../../data";
 import "./About.css";
@@ -52,8 +51,9 @@ const About = () => {
             </ul>
 
             <motion.a
-              href={CV}
-              download=""
+              href="https://dub.sh/ntK4Vt8"
+              target="_blank"
+              rel="noopener noreferrer"
               className="button"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
